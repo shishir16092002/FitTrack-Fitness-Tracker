@@ -5,12 +5,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import Auth from "../utils/auth";
 import { createResistance } from '../utils/API';
 import Header from "./Header";
-import resistanceIcon from "../assets/images/resistance-w.png"
-<<<<<<< HEAD
+import resistanceIcon from "../assets/images/resistance-w.png";
 import { format } from "date-fns";
-=======
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
-
 export default function Resistance() {
     const [resistanceForm, setResistanceForm] = useState({
         name: "",
@@ -96,11 +92,7 @@ export default function Resistance() {
                     <label>Name:</label>
                     <input type="text" name="name" id="name" placeholder="Bench Press"
                         value={resistanceForm.name} onChange={handleResistanceChange} />
-<<<<<<< HEAD
                     <label>Weight (KG):</label>
-=======
-                    <label>Weight (lbs):</label>
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                     <input type="number" name="weight" id="weight" placeholder="0"
                         value={resistanceForm.weight} onChange={handleResistanceChange} />
                     <label>Sets:</label>
@@ -110,7 +102,6 @@ export default function Resistance() {
                     <input type="number" name="reps" id="reps" placeholder="0"
                         value={resistanceForm.reps} onChange={handleResistanceChange} />
                     <label >Date:</label>
-<<<<<<< HEAD
                     <DatePicker
                       selected={startDate}
                       value={resistanceForm.date ? format(new Date(resistanceForm.date), "dd/MM/yyyy") : ""}
@@ -118,9 +109,6 @@ export default function Resistance() {
                       placeholderText="dd/mm/yyyy"
                       dateFormat="dd/MM/yyyy"
                     />
-=======
-                    <DatePicker selected={startDate} value={resistanceForm.date} onChange={handleDateChange} placeholderText="mm/dd/yyyy" />
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                     <button className='submit-btn' type="submit" disabled={!validateForm(resistanceForm)} >Add</button>
                 </form>
                 <p className='message'>{message}</p>

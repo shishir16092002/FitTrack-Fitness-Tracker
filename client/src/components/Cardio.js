@@ -6,10 +6,7 @@ import Auth from "../utils/auth";
 import { createCardio } from '../utils/API';
 import Header from "./Header";
 import cardioIcon from "../assets/images/cardio-w.png"
-<<<<<<< HEAD
 import { format } from "date-fns";
-=======
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
 
 export default function Cardio() {
     const [cardioForm, setCardioForm] = useState({
@@ -92,18 +89,13 @@ export default function Cardio() {
                     <label >Name:</label>
                     <input type="text" name="name" id="name" placeholder="Running"
                         value={cardioForm.name} onChange={handleCardioChange} />
-<<<<<<< HEAD
                     <label >Distance (KM):</label>
-=======
-                    <label >Distance (miles):</label>
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                     <input type="number" name="distance" id="distance" placeholder="0"
                         value={cardioForm.distance} onChange={handleCardioChange} />
                     <label >Duration (minutes):</label>
                     <input type="number" name="duration" id="duration" placeholder="0"
                         value={cardioForm.duration} onChange={handleCardioChange} />
                     <label>Date:</label>
-<<<<<<< HEAD
                     <DatePicker
                       selected={startDate}
                       value={cardioForm.date ? format(new Date(cardioForm.date), "dd/MM/yyyy") : ""}
@@ -111,9 +103,6 @@ export default function Cardio() {
                       placeholderText="dd/mm/yyyy"
                       dateFormat="dd/MM/yyyy"
                     />
-=======
-                    <DatePicker selected={startDate} value={cardioForm.date} onChange={handleDateChange} placeholderText="mm/dd/yyyy" />
->>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                     <button className='submit-btn cardio-submit-btn' type="submit" disabled={!validateForm(cardioForm)} >Add</button>
                 </form>
                 <p className='message'>{message}</p>

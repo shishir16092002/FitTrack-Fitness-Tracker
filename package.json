@@ -22,12 +22,10 @@
   "homepage": "https://github.com/shishir16092002/FitTrack-Fitness-Tracker/blob/main/README.md",
   "devDependencies": {
     "concurrently": "^7.6.0"
-
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "date-fns": "^4.1.0",
     "dotenv": "^16.6.0"
   }
 }
-
- 
