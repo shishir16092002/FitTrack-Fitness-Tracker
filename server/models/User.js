@@ -12,7 +12,11 @@ const UserSchema = new Schema({
     type: String,
     trim: true,
     required: "Password is Required",
+<<<<<<< HEAD
     minlength: 4,
+=======
+    minlength: 6,
+>>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
   },
   email: {
     type: String,

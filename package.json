@@ -22,9 +22,14 @@
   "homepage": "https://github.com/fitness-tracker#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+<<<<<<< HEAD
   },
   "dependencies": {
     "date-fns": "^4.1.0",
     "dotenv": "^16.6.0"
   }
 }
+=======
+  }
+}
+>>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99

@@ -88,14 +88,22 @@ export default function History() {
                         <div className='d-flex align-items-center'><img alt="cardio" src={cardioIcon} className="history-icon" /></div>
                         <div>
                           <p className='history-name'>{exercise.name}</p>
+<<<<<<< HEAD
                           <p className='history-index'>{exercise.distance} Kilometer </p>
+=======
+                          <p className='history-index'>{exercise.distance} miles </p>
+>>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                         </div>
                       </div>) : (
                       <div className="history-card resistance-title d-flex">
                         <div className='d-flex align-items-center'><img alt="resistance" src={resistanceIcon} className="history-icon" /></div>
                         <div >
                           <p className='history-name'>{exercise.name}</p>
+<<<<<<< HEAD
                           <p className='history-index'>{exercise.weight} Kg </p>
+=======
+                          <p className='history-index'>{exercise.weight} pounds </p>
+>>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
                         </div>
                       </div>)}
                   </Link>

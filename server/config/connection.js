@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+<<<<<<< HEAD
 require('dotenv').config();
 
 mongoose.set("strictQuery", false);
@@ -17,5 +18,19 @@ async function connectDB() {
 }
 
 connectDB();
+=======
+
+mongoose.set("strictQuery", false);
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-tracker", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}, err => {
+  if (err) throw err;
+  console.log('Connected to MongoDB!')
+}
+
+);
+>>>>>>> b1dbdded32eabbdea7a0431ba7696e40013c3e99
 
 module.exports = mongoose.connection;
