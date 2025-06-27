@@ -1,34 +1,29 @@
 const express = require("express");
-const path = require("path");
 const routes = require("./routes");
 const db = require("./config/connection");
 const cors = require('cors');
-require("dotenv").config(); 
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// CORS Setup
 app.use(cors({
-  origin: process.env.FRONTEND_ORIGIN || '*',
+  origin: process.env.FRONTEND_ORIGIN || '*',  
   credentials: true,
 }));
 
-// Serve up static assets
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
+// API Routes
+app.use("/api", routes);
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '../client/build/index.html'));
-// });
-
-app.use(routes);
-
+// DB and Server Start
 db.once("open", () => {
   app.listen(PORT, () => {
+    console.log(`✅ MongoDB connected successfully!`);
     console.log(`API server running on port ${PORT}!`);
   });
 });
